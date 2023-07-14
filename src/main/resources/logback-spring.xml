@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+  <contextName>logback</contextName>
+
+  <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{MM-dd HH:mm:ss.SSS} [%t] [%mdc{ip}] %highlight(%-5level) %cyan(%logger{1}) - %msg %n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="Info">
+    <appender-ref ref="Console"/>
+  </root>
+</configuration>
